@@ -22,8 +22,8 @@ create materialized view top_events as
 select * from top_events;
 --    TEILNEHMER                  ANLASS    ANLASS_ID    ORGANISATOR    VORNAME
 -- _____________ _______________________ ____________ ______________ __________
---           107 Whitlocks Auto-Event             378 Lehrer         Sophie
---           100 Realty Solutio-Event             154 Müller         Philipp
+--       --> 107 Whitlocks Auto-Event             378 Lehrer         Sophie
+--       --> 100 Realty Solutio-Event             154 Müller         Philipp
 --            99 Britches of Ge-Event             362 Scherer        Uta
 
 update vereinuser.teilnehmer t
@@ -36,8 +36,8 @@ where
 select * from top_events;
 --    TEILNEHMER                  ANLASS    ANLASS_ID    ORGANISATOR    VORNAME
 -- _____________ _______________________ ____________ ______________ __________
---           107 Whitlocks Auto-Event             378 Lehrer         Sophie
---           100 Realty Solutio-Event             154 Müller         Philipp
+--       --> 107 Whitlocks Auto-Event             378 Lehrer         Sophie
+--       --> 100 Realty Solutio-Event             154 Müller         Philipp
 --            99 Britches of Ge-Event             362 Scherer        Uta
 
 exec dbms_mview.refresh('top_events');
@@ -45,8 +45,8 @@ exec dbms_mview.refresh('top_events');
 select * from top_events;
 --    TEILNEHMER                  ANLASS    ANLASS_ID    ORGANISATOR    VORNAME
 -- _____________ _______________________ ____________ ______________ __________
---           106 Whitlocks Auto-Event             378 Lehrer         Sophie
---           101 Realty Solutio-Event             154 Müller         Philipp
+--       --> 106 Whitlocks Auto-Event             378 Lehrer         Sophie
+--       --> 101 Realty Solutio-Event             154 Müller         Philipp
 --            99 Britches of Ge-Event             362 Scherer        Uta
 
 update vereinuser.teilnehmer t
@@ -61,8 +61,8 @@ exec dbms_mview.refresh('top_events');
 select * from top_events;
 --    TEILNEHMER                  ANLASS    ANLASS_ID    ORGANISATOR    VORNAME
 -- _____________ _______________________ ____________ ______________ __________
---           107 Whitlocks Auto-Event             378 Lehrer         Sophie
---           100 Realty Solutio-Event             154 Müller         Philipp
+--       --> 107 Whitlocks Auto-Event             378 Lehrer         Sophie
+--       --> 100 Realty Solutio-Event             154 Müller         Philipp
 --            99 Britches of Ge-Event             362 Scherer        Uta
 
 drop materialized view top_events;
